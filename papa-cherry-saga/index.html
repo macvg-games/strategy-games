@@ -1,104 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-Y71QM9DR66"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-Y71QM9DR66");
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title class="cloak">Papa Cherry Saga | MacVG</title>
-    <span id="macvgmacvg" name="game409"></span>
-    <link
-      rel="shortcut icon"
-      href="/logo.png"
-      type="image/x-icon"
-      class="favicon"
+    <title>Papa Cherry Saga | MacVG</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
     />
-    <link rel="stylesheet" href="/macvg/projects/style.css" />
-    <script src="/macvg/projects/app.js"></script>
-    <link rel="stylesheet" href="/macvg/info.css" />
+    <meta name="robots" content="noindex,nofollow" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/bundle.min.css?v=123d1291a5"
+    />
   </head>
   <body>
-    <div class="game-container">
-      <div class="game-related">
-        <div class="actual" id="gameframe">
-          <iframe src="game.html" frameborder="0" id="iframe"> </iframe>
-          <div class="tool-bar">
-            <div class="more-left">
-              <img src="logo.jpg" alt="" />
-            </div>
-            <div class="leftest">
-              <h5 class="title">Papa Cherry Saga</h5>
-              <a href="">RoboWhale</a>
-            </div>
-            <img src="/macvg/back.svg" id="back" style="width: 20pxoo" />
-            <img src="/macvg/star-regular.svg" style="width: 20px" id="star" />
-            <img src="/macvg/share-solid.svg" style="width: 20px" id="share" />
-            <img src="/macvg/download.svg" id="download" />
-            <img src="/macvg/expand.svg" id="fullscreen" />
+    <div id="canvas-container"></div>
+    <div id="feedback-widget-container">
+      <div id="feedback-widget-wrapper">
+        <div id="feedback-widget">
+          <div class="button-close">
+            <span>×</span>
           </div>
+          <h2 class="title">Feedback</h2>
+          <p class="subtitle">How can we improve the game?</p>
+          <br />
+          <label for="message">Nachricht</label>
+          <textarea
+            id="message"
+            class="swal2-textarea dialog-textarea"
+          ></textarea>
+          <br />
+          <label for="email">Email (optional)</label>
+          <input type="email" id="email" class="swal2-input" />
+          <br />
+          <button class="button">Send</button>
         </div>
-        <div class="more-info">
-          <div class="info">
-            <h3>About</h3>
-            Oops, you caught us, we're still working hard to provide game
-            description on this game! In the upcoming updates, more and more
-            games will have their descriptions and instructions to help you beat
-            it, so stay tuned for more updates!<br /><br /><br /><br /><br /><br /><br />
-          </div>
-          <div class="info">
-            <h3>Controls</h3>
-            <ul>
-              <li>Click: Action</li>
-              <li>Drag: Switch</li>
-            </ul>
-          </div>
-          <div class="info">
-            <h3>Game Information</h3>
-            <ul>
-              <li>Release Date: December 2020</li>
-              <li>Developer: RoboWhale</li>
-              <li>Players: 1M+</li>
-              <li>
-                Catagory:
-                <a href="/macvg/strategy-puzzle.html" style="color: white"
-                  >Strategy and Puzzle</a
-                >
-              </li>
-              <li>Genre: Puzzle Games</li>
-              <li>Build: HTML5, JavaScript</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="right">
-        <div class="nav">
-          <a href="/macvg/" class="logo">
-            <img src="/macvg/macvg-logo.png" alt="" />
-          </a>
-          <div class="links">
-            <a href="/macvg/new.html" class="nav-link">New</a>
-            <a href="/macvg/trending.html" class="nav-link">Trending</a>
-            <a href="/macvg/groups.html" class="nav-link">Groups</a>
-            <a href="/macvg/bot.html" class="nav-link">Chat</a>
-            <a href="/macvg/projects/macboard/" class="nav-link">MacBoard</a>
-            <a href="/macvg/settings.html" class="nav-link">Settings</a>
-          </div>
-
-          <div class="copyright">© 2023 MacWeb</div>
-        </div>
+        <div id="alert">Message!</div>
       </div>
     </div>
+    <div id="rotate">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M16.48 2.52c3.27 1.55 5.61 4.72 5.97 8.48h1.5C23.44 4.84 18.29 0 12 0l-.66.03 3.81 3.81 1.33-1.32zm-6.25-.77c-.59-.59-1.54-.59-2.12 0L1.75 8.11c-.59.59-.59 1.54 0 2.12l12.02 12.02c.59.59 1.54.59 2.12 0l6.36-6.36c.59-.59.59-1.54 0-2.12L10.23 1.75zm4.6 19.44L2.81 9.17l6.36-6.36 12.02 12.02-6.36 6.36zm-7.31.29C4.25 19.94 1.91 16.76 1.55 13H.05C.56 19.16 5.71 24 12 24l.66-.03-3.81-3.81-1.33 1.32z"
+        ></path>
+      </svg>
+    </div>
+    <div id="loading-overlay" class="spinner-container">
+      <div class="loading-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div id="preloader">
+        <svg class="progress-ring"></svg>
+        <picture>
+          <source srcset="css/icon.webp?v=7f87c9a5d9" type="image/webp" />
+          <img
+            src="css/icon.png?v=97da252bc7"
+            alt="Papa Cherry"
+            id="game-icon"
+          />
+        </picture>
+        <p class="progress-text">0</p>
+      </div>
+      <p class="copyright">Developed by Robowhale, 2020-2021</p>
+    </div>
+    <script>
+      window.environment = "production";
+    </script>
+    <script
+      src="js/cache-busters.js?v=cd1809849c"
+      type="text/javascript"
+    ></script>
+    <script src="js/vendor.min.js?v=707df50f35" type="text/javascript"></script>
+    <script src="js/game.min.js?v=4fe477d26c" type="text/javascript"></script>
   </body>
 </html>

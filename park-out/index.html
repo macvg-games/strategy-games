@@ -1,102 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-Y71QM9DR66"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+    <meta charset="utf-8" />
 
-      gtag("config", "G-Y71QM9DR66");
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title class="cloak">Park Out| MacVG</title>
-    <span id="macvgmacvg" name="game413"></span>
-    <link
-      rel="shortcut icon"
-      href="/logo.png"
-      type="image/x-icon"
-      class="favicon"
+    <title>Park Out | MacVG</title>
+
+    <!--http://www.html5rocks.com/en/mobile/mobifying/-->
+    <meta
+      name="viewport"
+      content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1,minimal-ui=true"
     />
-    <link rel="stylesheet" href="/macvg/projects/style.css" />
-    <script src="/macvg/projects/app.js"></script>
-  </head>
-  <body>
-    <div class="game-container">
-      <div class="game-related">
-        <div class="actual" id="gameframe">
-          <iframe src="game.html" frameborder="0" id="iframe"> </iframe>
-          <div class="tool-bar">
-            <div class="more-left">
-              <img src="logo.jpg" alt="" />
-            </div>
-            <div class="leftest">
-              <h5 class="title">Park Out</h5>
-              <a href="">Okashi Games</a>
-            </div>
-            <img src="/macvg/back.svg" id="back" style="width: 20pxoo" />
-            <img src="/macvg/star-regular.svg" style="width: 20px" id="star" />
-            <img src="/macvg/share-solid.svg" style="width: 20px" id="share" />
-            <img src="/macvg/download.svg" id="download" />
-            <img src="/macvg/expand.svg" id="fullscreen" />
-          </div>
-        </div>
-        <div class="more-info">
-          <div class="info">
-            <h3>About</h3>
-            Oops, you caught us, we're still working hard to provide game
-            description on this game! In the upcoming updates, more and more
-            games will have their descriptions and instructions to help you beat
-            it, so stay tuned for more updates!<br /><br /><br /><br /><br /><br /><br />
-          </div>
-          <div class="info">
-            <h3>Controls</h3>
-            <ul>
-              <li>Drag: Drive</li>
-            </ul>
-          </div>
-          <div class="info">
-            <h3>Game Information</h3>
-            <ul>
-              <li>Release Date: Unknown</li>
-              <li>Developer: Okashi Games</li>
-              <li>Players: 5M+</li>
-              <li>
-                Catagory:
-                <a href="/macvg/strategy-puzzle.html" style="color: white"
-                  >Strategy and Puzzle</a
-                >
-              </li>
-              <li>Genre: Puzzle Games</li>
-              <li>Build: HTML5, JavaScript</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="right">
-        <div class="nav">
-          <a href="/macvg/" class="logo">
-            <img src="/macvg/macvg-logo.png" alt="" />
-          </a>
-          <div class="links">
-            <a href="/macvg/new.html" class="nav-link">New</a>
-            <a href="/macvg/trending.html" class="nav-link">Trending</a>
-            <a href="/macvg/groups.html" class="nav-link">Groups</a>
-            <a href="/macvg/bot.html" class="nav-link">Chat</a>
-            <a href="/macvg/projects/macboard/" class="nav-link">MacBoard</a>
-            <a href="/macvg/settings.html" class="nav-link">Settings</a>
-          </div>
 
-          <div class="copyright">© 2023 MacWeb</div>
-        </div>
+    <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- force webkit on 360 -->
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <!-- force edge on IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <!-- force full screen on some browser -->
+    <meta name="full-screen" content="yes" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+
+    <!--fix fireball/issues/3568 -->
+    <!--<meta name="browsermode" content="application">-->
+    <meta name="x5-page-mode" content="app" />
+
+    <!--<link rel="apple-touch-icon" href=".png" />-->
+    <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
+
+    <script src="patch/js/poki-sdk.js"></script>
+
+    <script src="./sitelock.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <script>
+      PokiSDK.init()
+        .then(() => {
+          console.log("Poki SDK successfully initialized");
+          // fire your function to continue to game
+        })
+        .catch(() => {
+          console.log("Initialized, but the user likely has adblock");
+          // fire your function to continue to game
+        });
+
+      //Poki solution for disabling page scroll.
+      window.addEventListener("keydown", (ev) => {
+        if (["ArrowDown", "ArrowUp", " "].includes(ev.key)) {
+          ev.preventDefault();
+        }
+      });
+      window.addEventListener("wheel", (ev) => ev.preventDefault(), {
+        passive: false,
+      });
+    </script>
+
+    <div id="GameDiv">
+      <div id="Cocos3dGameContainer">
+        <canvas
+          id="GameCanvas"
+          oncontextmenu="event.preventDefault()"
+          tabindex="0"
+        ></canvas>
       </div>
     </div>
+
+    <!-- Polyfills bundle. -->
+    <script src="src/polyfills.bundle.js" charset="utf-8"></script>
+
+    <!-- SystemJS support. -->
+    <script src="src/system.bundle.js" charset="utf-8"></script>
+
+    <!-- Import map -->
+    <script
+      src="src/import-map.json"
+      type="systemjs-importmap"
+      charset="utf-8"
+    ></script>
+
+    <script>
+      System.import("./index.js").catch(function (err) {
+        console.error(err);
+      });
+    </script>
   </body>
 </html>

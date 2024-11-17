@@ -1,99 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-Y71QM9DR66"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title class="cloak">Meme 2048 | MacVG</title>
+        <span id="macvgmacvg" name="game143"></span>
+    <link class="favicon" rel="shortcut icon" href="/logo.png" />
+    <script src="/macvg/cloaker.js"></script>
 
-      gtag("config", "G-Y71QM9DR66");
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title class="cloak">Meme 2048 | MacVG</title>
-    <span id="macvgmacvg" name="game143"></span>
-    <link
-      rel="shortcut icon"
-      href="/logo.png"
-      type="image/x-icon"
-      class="favicon"
-    />
-    <link rel="stylesheet" href="/macvg/projects/style.css" />
-    <script src="/macvg/projects/app.js"></script>
-    <link rel="stylesheet" href="/macvg/info.css" />
-  </head>
-  <body>
-    <div class="game-container">
-      <div class="game-related">
-        <div class="actual" id="gameframe">
-          <iframe src="game.html" frameborder="0" id="iframe">
-          </iframe>
-          <div class="tool-bar">
-            <div class="more-left">
-              <img src="img/rickroll.gif" alt="" />
-            </div>
-            <div class="leftest">
-              <h5 class="title">Meme 2048</h5>
-              <a href="">Gabriele Cirulli, 3kh0
-              </a>
-            </div>
-            <img src="/macvg/back.svg" id="back" style="width: 20pxoo" />
-            <img src="/macvg/star-regular.svg" style="width: 20px" id="star" />
-            <img src="/macvg/share-solid.svg" style="width: 20px" id="share" />
-            <img src="/macvg/download.svg" id="downloadd" />
-            <img src="/macvg/expand.svg" id="fullscreen" />
-          </div>
-        </div>
-        <div class="more-info">
-          <div class="info">
-            <h3>About</h3>
-            Oops, you caught us, we're still working hard to provide game
-            description on this game! In the upcoming updates, more and more
-            games will have their descriptions and instructions to help you beat
-            it, so stay tuned for more updates!<br /><br /><br /><br /><br /><br /><br />
-          </div>
-          <div class="info">
-            <h3>Controls</h3>
-            <ul>
-              Still working on this one O_O
-            </ul>
-          </div>
-          <div class="info">
-            <h3>Game Information</h3>
-            <ul>
-              No information is available for this game.
-            </ul>
-          </div>
-          <div class="info similar">
-            <h3>Similar Games</h3>
-            <div class="games">Still working on this one!</div>
-          </div>
-        </div>
-      </div>
-      <div class="right">
-        <div class="nav">
-          <a href="/macvg/" class="logo">
-            <img src="/macvg/macvg-logo.png" alt="" />
-          </a>
-          <div class="links">
-            <a href="/macvg/new.html" class="nav-link">New</a>
-            <a href="/macvg/trending.html" class="nav-link">Trending</a>
-            <a href="/macvg/groups.html" class="nav-link">Groups</a>
-            <a href="/macvg/bot.html" class="nav-link">Chat</a>
-            <a href="/macvg/projects/macboard/" class="nav-link">MacBoard</a>
-            <a href="/macvg/settings.html" class="nav-link">Settings</a>
-          </div>
+        <link href="style/main.css" rel="stylesheet" type="text/css" />
+    
+        <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui" />
 
-          <div class="copyright">© 2023 MacWeb</div>
+        <!-- here is a list of all the memes! -->
+        <style>
+            .tile-inner {
+                background-position: center center !important;
+                background-size: cover !important;
+                background-repeat: no-repeat !important;
+                text-indent: -999px;
+                overflow: hidden;
+            }
+            .tile.tile-2 .tile-inner {
+                background-image: url("img/honey_badger.jpg") !important;
+            }
+            .tile.tile-4 .tile-inner {
+                background-image: url("img/tron_guy.jpg") !important;
+            }
+            .tile.tile-8 .tile-inner {
+                background-image: url("img/peanut_butter_jelly_time.gif") !important;
+            }
+            .tile.tile-16 .tile-inner {
+                background-image: url("img/numa_numa.gif") !important;
+            }
+            .tile.tile-32 .tile-inner {
+                background-image: url("img/dramatic_chipmunk.gif") !important;
+            }
+            .tile.tile-64 .tile-inner {
+                background-image: url("img/star_wars_kid.gif") !important;
+            }
+            .tile.tile-128 .tile-inner {
+                background-image: url("img/leave_britney_alone.jpg") !important;
+            }
+            .tile.tile-256 .tile-inner {
+                background-image: url("img/keyboard_cat.gif") !important;
+            }
+            .tile.tile-512 .tile-inner {
+                background-image: url("img/ceiling_cat.png") !important;
+            }
+            .tile.tile-1024 .tile-inner {
+                background-image: url("img/hello_my_future_girlfriend.jpg") !important;
+            }
+            .tile.tile-2048 .tile-inner {
+                background-image: url("img/dancing_baby.gif") !important;
+            }
+        </style>
+    </head>
+    <script type="application/javascript" src="/js/main.js"></script>
+    <body>
+        <div class="container">
+            <div class="heading">
+                <h1 class="title"><marquee>Meme 2048</marquee></h1>
+                <div class="scores-container">
+                    <div class="score-container">0</div>
+                    <div class="best-container">0</div>
+                </div>
+            </div>
+
+            <div class="above-game">
+                <p class="game-intro"><img src="img/hot.gif" /> Join the memes! <img src="img/hot.gif" /></p>
+                <a class="restart-button">New Game</a>
+            </div>
+
+            <div class="game-container">
+                <div class="game-message">
+                    <p></p>
+                    <div class="lower">
+                        <a class="keep-playing-button">Keep going</a>
+                        <a class="retry-button">Try again</a>
+                    </div>
+                </div>
+
+                <div class="grid-container">
+                    <div class="grid-row">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+
+                <div class="tile-container"></div>
+            </div>
+
+            <p class="game-explanation"><strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same meme touch, they <strong>merge into one!</strong></p>
+            <hr />
+            <p>
+                Original version created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and
+                conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a><br />
+                <br />
+                Remix by <a href="https://3kh0.github.io/">Echo</a>! Enjoy!<br />
+            </p>
         </div>
-      </div>
-    </div>
-  </body>
+        <script src="js/bind_polyfill.js"></script>
+        <script src="js/classlist_polyfill.js"></script>
+        <script src="js/animframe_polyfill.js"></script>
+        <script src="js/keyboard_input_manager.js"></script>
+        <script src="js/html_actuator.js"></script>
+        <script src="js/grid.js"></script>
+        <script src="js/tile.js"></script>
+        <script src="js/local_storage_manager.js"></script>
+        <script src="js/game_manager.js"></script>
+        <script src="js/application.js"></script>
+    </body>
 </html>

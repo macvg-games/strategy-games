@@ -1,101 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-Y71QM9DR66"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-Y71QM9DR66");
-    </script>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title class="cloak">Wood Block Puzzle | MacVG</title>
-    <span id="macvgmacvg" name="game448"></span>
-    <link
-      rel="shortcut icon"
-      href="/logo.png"
-      type="image/x-icon"
-      class="favicon"
+    <title>Wood Block Puzzle | MacVG</title>
+    <meta
+      name="description"
+      content="Wood Block Puzzle, Wooden Block Puzzle, Block Puzzle Jewel, Jewel Blocks, Games235"
     />
-    <link rel="stylesheet" href="/macvg/projects/style.css" />
-    <script src="/macvg/projects/app.js"></script>
+    <meta property="og:image" content="wood-block-puzzle.png" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
+    <script src="distx/lib/phaser.min.js"></script>
+    <script src="distx/lib/webfont.js"></script>
+    <script type="text/javascript" src="distx/data/game.js"></script>
   </head>
-  <body>
-    <div class="game-container">
-      <div class="game-related">
-        <div class="actual" id="gameframe">
-          <iframe src="game.html" frameborder="0" id="iframe"> </iframe>
-          <div class="tool-bar">
-            <div class="more-left">
-              <img src="logo.jpg" alt="" />
-            </div>
-            <div class="leftest">
-              <h5 class="title">Wood Block Puzzle</h5>
-              <a href="">Anonymous</a>
-            </div>
-            <img src="/macvg/back.svg" id="back" style="width: 20pxoo" />
-            <img src="/macvg/star-regular.svg" style="width: 20px" id="star" />
-            <img src="/macvg/share-solid.svg" style="width: 20px" id="share" />
-            <img src="/macvg/download.svg" id="download" />
-            <img src="/macvg/expand.svg" id="fullscreen" />
-          </div>
-        </div>
-        <div class="more-info">
-          <div class="info">
-            <h3>About</h3>
-            Oops, you caught us, we're still working hard to provide game
-            description on this game! In the upcoming updates, more and more
-            games will have their descriptions and instructions to help you beat
-            it, so stay tuned for more updates!<br /><br /><br /><br /><br /><br /><br />
-          </div>
-          <div class="info">
-            <h3>Controls</h3>
-            <ul>
-              <li>Drag: Place Block</li>
-            </ul>
-          </div>
-          <div class="info">
-            <h3>Game Information</h3>
-            <ul>
-              <li>Release Date: Unknown</li>
-              <li>Developer: Anonymous</li>
-              <li>Players: 1M+</li>
-              <li>Catagory:
-                <a href="/macvg/strategy-puzzle.html" style="color: white"
-                  >Strategy and Puzzle</a
-                >
-              </li>
-              <li>Genre: Puzzle Games</li>
-              <li>Build: HTML5, JavaScript</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="right">
-        <div class="nav">
-          <a href="/macvg/" class="logo">
-            <img src="/macvg/macvg-logo.png" alt="" />
-          </a>
-          <div class="links">
-            <a href="/macvg/new.html" class="nav-link">New</a>
-            <a href="/macvg/trending.html" class="nav-link">Trending</a>
-            <a href="/macvg/groups.html" class="nav-link">Groups</a>
-            <a href="/macvg/bot.html" class="nav-link">Chat</a>
-            <a href="/macvg/projects/macboard/" class="nav-link">MacBoard</a>
-            <a href="/macvg/settings.html" class="nav-link">Settings</a>
-          </div>
-
-          <div class="copyright">© 2023 MacWeb</div>
-        </div>
-      </div>
+  <body style="overflow: hidden">
+    <script src="lib/AzerionWrapper_v1.1.28.f.js"></script>
+    <div
+      style="
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+      "
+    >
+      <div id="game"></div>
+      <div id="turn"></div>
     </div>
   </body>
 </html>

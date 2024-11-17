@@ -1,102 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-Y71QM9DR66"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-Y71QM9DR66");
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title class="cloak">Pudding Monsters | MacVG</title>
-    <span id="macvgmacvg" name="game420"></span>
-    <link
-      rel="shortcut icon"
-      href="/logo.png"
-      type="image/x-icon"
-      class="favicon"
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no"
     />
-    <link rel="stylesheet" href="/macvg/projects/style.css" />
-    <script src="/macvg/projects/app.js"></script>
+    <meta name="author" content="GamePix" />
+    <title>Pudding Monsters | MacVG</title>
+    <style>
+      html,
+      body {
+        position: fixed;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      * {
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Old versions of Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
+        /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+        -ms-touch-action: none;
+        -ms-content-zooming: none;
+        touch-action: none;
+        outline: none;
+      }
+
+      #background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      #background,
+      #loading {
+        background-color: linear-gradient(to top, #00395e, #004978);
+        background: linear-gradient(to top, #00395e, #004978);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      body {
+        background: transparent !important;
+      }
+
+      .gpxForce-bckgr-gamefrm {
+        width: 100%;
+        height: 100%;
+        -webkit-filter: blur(20px);
+        filter: blur(20px);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        background-position: 50% !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+        z-index: -1;
+        opacity: 1;
+      }
+    </style>
+    <script>
+      const alertFn = window.alert;
+      window.alert = (message) => {
+        if (message.startsWith("GamePix SDK log:")) {
+          console.log(message);
+          return;
+        }
+        alertFn(message);
+      };
+    </script>
+    <!-- <script src="https://integration.gamepix.com/sdk/v3/gamepix.sdk.js"></script> -->
+    <!-- <script type="text/javascript" src="https://integration.gamepix.com/sdk/tools/fb.js"></script></head> -->
   </head>
   <body>
-    <div class="game-container">
-      <div class="game-related">
-        <div class="actual" id="gameframe">
-          <iframe src="game.html" frameborder="0" id="iframe"> </iframe>
-          <div class="tool-bar">
-            <div class="more-left">
-              <img src="logo.jpg" alt="" />
-            </div>
-            <div class="leftest">
-              <h5 class="title">Pudding Monsters</h5>
-              <a href="">ZeptoLab</a>
-            </div>
-            <img src="/macvg/back.svg" id="back" style="width: 20pxoo" />
-            <img src="/macvg/star-regular.svg" style="width: 20px" id="star" />
-            <img src="/macvg/share-solid.svg" style="width: 20px" id="share" />
-            <img src="/macvg/download.svg" id="download" />
-            <img src="/macvg/expand.svg" id="fullscreen" />
-          </div>
-        </div>
-        <div class="more-info">
-          <div class="info">
-            <h3>About</h3>
-            Oops, you caught us, we're still working hard to provide game
-            description on this game! In the upcoming updates, more and more
-            games will have their descriptions and instructions to help you beat
-            it, so stay tuned for more updates!<br /><br /><br /><br /><br /><br /><br />
-          </div>
-          <div class="info">
-            <h3>Controls</h3>
-            <ul>
-              <li>Drag: Move</li>
-            </ul>
-          </div>
-          <div class="info">
-            <h3>Game Information</h3>
-            <ul>
-              <li>Release Date: December 20, 2012</li>
-              <li>Developer: ZeptoLab</li>
-              <li>Players: 10M+</li>
-              <li>
-                Catagory:
-                <a href="/macvg/strategy-puzzle.html" style="color: white"
-                  >Strategy and Puzzle</a
-                >
-              </li>
-              <li>Genre: Puzzle Games</li>
-              <li>Build: HTML5, JavaScript</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="right">
-        <div class="nav">
-          <a href="/macvg/" class="logo">
-            <img src="/macvg/macvg-logo.png" alt="" />
-          </a>
-          <div class="links">
-            <a href="/macvg/new.html" class="nav-link">New</a>
-            <a href="/macvg/trending.html" class="nav-link">Trending</a>
-            <a href="/macvg/groups.html" class="nav-link">Groups</a>
-            <a href="/macvg/bot.html" class="nav-link">Chat</a>
-            <a href="/macvg/projects/macboard/" class="nav-link">MacBoard</a>
-            <a href="/macvg/settings.html" class="nav-link">Settings</a>
-          </div>
+    <div id="background"></div>
+    <canvas id="canvas" tabindex="0"></canvas>
+    <script>
+      function getParameterByName(name, url) {
+        name = name.replace(/[\[\]]/g, "\\$&");
+        const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return "";
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
 
-          <div class="copyright">© 2023 MacWeb</div>
-        </div>
-      </div>
-    </div>
+      if (getParameterByName("autorun", window.location.href) !== "0") {
+        const createScript = function () {
+          const el = document.createElement("script");
+          el.onload = function () {
+            tinyLoader.load();
+          };
+          el.src = "patch/gamepix/tiny-loader.js";
+          return el;
+        };
+
+        const corsScript = createScript();
+        corsScript.onerror = function () {
+          document.body.removeChild(corsScript);
+          const el = createScript();
+          el.onerror = console.error;
+          document.body.appendChild(el);
+        };
+
+        corsScript.setAttribute("crossorigin", "anonymous");
+        document.body.appendChild(corsScript);
+      }
+    </script>
+    <div class="gpxForce-bckgr-gamefrm"></div>
   </body>
 </html>

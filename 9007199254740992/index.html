@@ -1,10 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="utf-8" />
+    <title class="cloak">9007199254740992 | MacVG</title>
+    <link class="favicon" rel="shortcut icon" href="/logo.png" />
+    <script src="/macvg/cloaker.js"></script>
+    <span id="macvgmacvg" name="game8"></span>
+
+    <link href="style/main.css" rel="stylesheet" type="text/css" />
+    <link href="style/others.css" rel="stylesheet" type="text/css" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta
+      name="viewport"
+      content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+    />
+  </head>
+  <script src="/js/main.js"></script>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1 class="title">9007199254740992</h1>
+        <div class="scores-container">
+          <div class="score-container">0</div>
+          <div class="best-container">0</div>
+        </div>
+      </div>
+      <p class="game-intro">
+        Join the numbers and get to the <strong>9007199254740992 tile!</strong>
+      </p>
+
+      <div class="game-container">
+        <div class="game-message">
+          <p></p>
+          <div class="lower">
+            <a class="retry-button">Try again</a>
+          </div>
+        </div>
+
+        <div class="grid-container">
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+        </div>
+
+        <div class="tile-container"></div>
+      </div>
+
+      <div class="auto-move-container">
+        <p>
+          <strong>Move with </strong
+          ><input
+            type="text"
+            name="auto-move-time"
+            value=""
+            id="auto-move-input-time"
+            onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+            size="6"
+            maxlength="8"
+          /><strong> ms.</strong>
+          <input
+            type="submit"
+            value="Run"
+            id="auto-move-run"
+            class="auto-move-button"
+          />
+          <input
+            type="submit"
+            value="Stop"
+            id="auto-move-stop"
+            class="auto-move-button"
+          />
+        </p>
+      </div>
+
+      <p class="game-explanation">
+        <strong class="important">How to play:</strong> Use your
+        <strong>arrow keys</strong> to move the tiles. When two tiles with the
+        same number touch, they <strong>merge into one!</strong>
+      </p>
+      <hr />
+      <p>
+        <strong class="important">Note:</strong> This site is
+        <font color="red"><strong>not</strong></font> the official version of
+        2048. You can play the normal version
+        <a href="https://3kh0.github.io/2048/">here!</a>
+      </p>
+
+      <hr />
+      <p>
+        Orginal 2048 game by
+        <a href="http://gabrielecirulli.com" target="_blank"
+          >Gabriele Cirulli.</a
+        ><br />
+        Expanded by <a href="https://github.com/3kh0" target="_blank">3kh0</a
+        ><br />
+      </p>
+
+      <hr />
+    </div>
+
+    <script src="js/animframe_polyfill.js"></script>
+    <script src="js/keyboard_input_manager.js"></script>
+    <script src="js/html_actuator.js"></script>
+    <script src="js/grid.js"></script>
+    <script src="js/tile.js"></script>
+    <script src="js/local_score_manager.js"></script>
+    <script src="js/game_manager.js"></script>
+    <script src="js/application.js"></script>
+    <script src="js/auto_move.js"></script>
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-Y71QM9DR66"
+      src="https://www.googletagmanager.com/gtag/js?id=G-98DP5VKS42"
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -13,84 +199,13 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "G-Y71QM9DR66");
+      gtag("config", "G-98DP5VKS42");
     </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title class="cloak">9007199254740992 | MacVG</title>
-    <span id="macvgmacvg" name="game8"></span>
-    <link
-      rel="shortcut icon"
-      href="/logo.png"
-      type="image/x-icon"
-      class="favicon"
-    />
-    <link rel="stylesheet" href="/macvg/projects/style.css" />
-    <script src="/macvg/projects/app.js"></script>
-    <link rel="stylesheet" href="/macvg/info.css" />
-  </head>
-  <body>
-    <div class="game-container">
-      <div class="game-related">
-        <div class="actual" id="gameframe">
-          <iframe src="game.html" frameborder="0" id="iframe"> </iframe>
-          <div class="tool-bar">
-            <div class="more-left">
-              <img src="logo-4.png" alt="" />
-            </div>
-            <div class="leftest">
-              <h5 class="title">9007199254740992</h5>
-              <a href="">Gabriele Cirulli, 3kh0</a>
-            </div>
-            <img src="/macvg/back.svg" id="back" style="width: 20pxoo" />
-            <img src="/macvg/star-regular.svg" style="width: 20px" id="star" />
-            <img src="/macvg/share-solid.svg" style="width: 20px" id="share" />
-            <img src="/macvg/download.svg" id="downloadd" />
-            <img src="/macvg/expand.svg" id="fullscreen" />
-          </div>
-        </div>
-        <div class="more-info">
-          <div class="info">
-            <h3>About</h3>
-            This is an insane time wasting version of 2048 where you have a very
-            big area to merge many many tiles until they keep doubling to
-            9007199254740992! Use arrow keys to move all the tiles. If no tiles
-            can be moved anymore, you fail.
-          </div>
-          <div class="info">
-            <h3>Controls</h3>
-            <ul>
-              <li>Arrow / WASD Keys: Move Number Tiles</li>
-            </ul>
-          </div>
-          <div class="info">
-            <h3>Game Information</h3>
-            <ul>
-              No information is available for this game.
-            </ul>
-          </div>
-          <div class="info similar">
-            <h3>Similar Games</h3>
-            <div class="games">Still working on this one!</div>
-          </div>
-        </div>
-      </div>
-      <div class="right">
-        <div class="nav">
-          <a href="/macvg/" class="logo">
-            <img src="/macvg/macvg-logo.png" alt="" />
-          </a>
-          <div class="links">
-            <a href="/macvg/new.html" class="nav-link">New</a>
-            <a href="/macvg/trending.html" class="nav-link">Trending</a>
-            <a href="/macvg/groups.html" class="nav-link">Groups</a>
-            <a href="/macvg/bot.html" class="nav-link">Chat</a>
-            <a href="/macvg/projects/macboard/" class="nav-link">MacBoard</a>
-            <a href="/macvg/settings.html" class="nav-link">Settings</a>
-          </div>
-          <div class="copyright">© 2023 MacWeb</div>
-        </div>
-      </div>
-    </div>
+    <!--<script>window.scrollTo(0,document.body.scrollHeight);</script>-->
+    <style>
+      hr.tw {
+        border-color: blue;
+      }
+    </style>
   </body>
 </html>
